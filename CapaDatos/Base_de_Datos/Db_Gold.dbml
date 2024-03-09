@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DbGolden" Class="Db_GoldDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-MELI-😊;Initial Catalog=DbGolden;Integrated Security=True;Encrypt=False" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="DbGoldenConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TD_CuentaAhorros" Member="TD_CuentaAhorros">
+    <Type Name="TD_CuentaAhorros">
+      <Column Name="numerocuenta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="clienteid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="servicio_ahorros_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="balance" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="tasa_interes" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Clientes_TD_CuentaAhorros" Member="TM_Clientes" ThisKey="clienteid" OtherKey="clienteid" Type="TM_Clientes" IsForeignKey="true" />
+      <Association Name="TM_ServicioAhorros_TD_CuentaAhorros" Member="TM_ServicioAhorros" ThisKey="servicio_ahorros_id" OtherKey="servicio_ahorros_id" Type="TM_ServicioAhorros" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TD_CuentaCorriente" Member="TD_CuentaCorriente">
+    <Type Name="TD_CuentaCorriente">
+      <Column Name="numerocuenta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="clienteid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="servicio_corriente_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="balance" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="balance_sobregiro" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="tasa_interes" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Clientes_TD_CuentaCorriente" Member="TM_Clientes" ThisKey="clienteid" OtherKey="clienteid" Type="TM_Clientes" IsForeignKey="true" />
+      <Association Name="TM_ServicioCorriente_TD_CuentaCorriente" Member="TM_ServicioCorriente" ThisKey="servicio_corriente_id" OtherKey="servicio_corriente_id" Type="TM_ServicioCorriente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TD_CuentaCredito" Member="TD_CuentaCredito">
+    <Type Name="TD_CuentaCredito">
+      <Column Name="numerocuenta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="clienteid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="servicio_credito_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="balance_corte" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="balance_sobregiro" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fechacorte" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="balance_fecha" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="corte_total" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Clientes_TD_CuentaCredito" Member="TM_Clientes" ThisKey="clienteid" OtherKey="clienteid" Type="TM_Clientes" IsForeignKey="true" />
+      <Association Name="TM_ServicioCredito_TD_CuentaCredito" Member="TM_ServicioCredito" ThisKey="servicio_credito_id" OtherKey="servicio_credito_id" Type="TM_ServicioCredito" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TD_CuentaPrestamo" Member="TD_CuentaPrestamo">
+    <Type Name="TD_CuentaPrestamo">
+      <Column Name="numerocuenta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="clienteid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="servicio_prestamo_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha_desembolso" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="numero_cuotas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha_cancelacion" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tasa_interes" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="monto_total" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="cuota_no_seguro" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="cuota_seguro" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="limite_extraordinario" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Clientes_TD_CuentaPrestamo" Member="TM_Clientes" ThisKey="clienteid" OtherKey="clienteid" Type="TM_Clientes" IsForeignKey="true" />
+      <Association Name="TM_Prestamos_TD_CuentaPrestamo" Member="TM_Prestamos" ThisKey="servicio_prestamo_id" OtherKey="servicio_prestamo_id" Type="TM_Prestamos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TD_Transacciones" Member="TD_Transacciones">
+    <Type Name="TD_Transacciones">
+      <Column Name="compraid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="clienteid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="numerocuenta" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="monto" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fecha" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="comercio" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="impuesto" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="estatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="codigo_referencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Clientes_TD_Transacciones" Member="TM_Clientes" ThisKey="clienteid" OtherKey="clienteid" Type="TM_Clientes" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Clientes" Member="TM_Clientes">
+    <Type Name="TM_Clientes">
+      <Column Name="clienteid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="apellido" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="cedula" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ingresos" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="numero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="telefono" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="puntaje" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="clave" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Clientes_TD_CuentaAhorros" Member="TD_CuentaAhorros" ThisKey="clienteid" OtherKey="clienteid" Type="TD_CuentaAhorros" />
+      <Association Name="TM_Clientes_TD_CuentaCorriente" Member="TD_CuentaCorriente" ThisKey="clienteid" OtherKey="clienteid" Type="TD_CuentaCorriente" />
+      <Association Name="TM_Clientes_TD_CuentaCredito" Member="TD_CuentaCredito" ThisKey="clienteid" OtherKey="clienteid" Type="TD_CuentaCredito" />
+      <Association Name="TM_Clientes_TD_CuentaPrestamo" Member="TD_CuentaPrestamo" ThisKey="clienteid" OtherKey="clienteid" Type="TD_CuentaPrestamo" />
+      <Association Name="TM_Clientes_TD_Transacciones" Member="TD_Transacciones" ThisKey="clienteid" OtherKey="clienteid" Type="TD_Transacciones" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Prestamos" Member="TM_Prestamos">
+    <Type Name="TM_Prestamos">
+      <Column Name="servicio_prestamo_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ingresos_minimos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comision_mora" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Prestamos_TD_CuentaPrestamo" Member="TD_CuentaPrestamo" ThisKey="servicio_prestamo_id" OtherKey="servicio_prestamo_id" Type="TD_CuentaPrestamo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_ServicioAhorros" Member="TM_ServicioAhorros">
+    <Type Name="TM_ServicioAhorros">
+      <Column Name="servicio_ahorros_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="deposito_apertura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="balance_minimo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="minimo_transferencias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cargo_mensual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tasa_interes" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="retiro_plazo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_ServicioAhorros_TD_CuentaAhorros" Member="TD_CuentaAhorros" ThisKey="servicio_ahorros_id" OtherKey="servicio_ahorros_id" Type="TD_CuentaAhorros" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_ServicioCorriente" Member="TM_ServicioCorriente">
+    <Type Name="TM_ServicioCorriente">
+      <Column Name="servicio_corriente_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="deposito_apertura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="balance_minimo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="minimo_transferencias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cargo_mensual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cargo_bajo_balance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cheques_gratis" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cheques_adicionales" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_ServicioCorriente_TD_CuentaCorriente" Member="TD_CuentaCorriente" ThisKey="servicio_corriente_id" OtherKey="servicio_corriente_id" Type="TD_CuentaCorriente" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_ServicioCredito" Member="TM_ServicioCredito">
+    <Type Name="TM_ServicioCredito">
+      <Column Name="servicio_credito_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="cargo_anual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tasa_interes" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="avance_efectivo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sobregiro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cargo_perdida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_ServicioCredito_TD_CuentaCredito" Member="TD_CuentaCredito" ThisKey="servicio_credito_id" OtherKey="servicio_credito_id" Type="TD_CuentaCredito" />
+    </Type>
+  </Table>
+</Database>
