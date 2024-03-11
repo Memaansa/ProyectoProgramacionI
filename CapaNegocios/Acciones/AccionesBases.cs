@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CapaDatos.Base_de_Datos;
 using System.Data;
 
-namespace CapaNegocios
+namespace CapaNegocios.Acciones
 {
     public class AccionesBases 
     {
