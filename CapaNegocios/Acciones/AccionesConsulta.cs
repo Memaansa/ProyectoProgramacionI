@@ -41,7 +41,7 @@ namespace CapaNegocios.Acciones
         }
 
         public List<TD_CuentaCorriente> listarCuentaCorriente(Db_GoldDataContext db_GoldDataContext)
-        {
+    {
             return db_GoldDataContext.TD_CuentaCorriente.ToList();
         }
 
@@ -59,16 +59,16 @@ namespace CapaNegocios.Acciones
         {
             return db_GoldDataContext.TD_CuentaPrestamo.ToList();
         }
-
+          
         public List<TD_Transacciones> listarTransacciones(Db_GoldDataContext db_GoldDataContext)
         {
             return db_GoldDataContext.TD_Transacciones.ToList();
         }
-
-
-
+        
+        
+      
         #endregion
-
+            
         #region Filtros Relacionales
 
         public List<TD_CuentaAhorros> listAhorrosCliente(int id, Db_GoldDataContext db_GoldDataContext) 
