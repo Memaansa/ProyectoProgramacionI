@@ -6,56 +6,75 @@ using System.Threading.Tasks;
 using System.Data;
 using CapaDatos.Base_de_Datos;
 using System.ComponentModel;
+using CapaNegocios.Acciones;
 
 
 namespace CapaNegocios.Acciones
 {
     public class AccionesConsulta : AccionesBases
     {
-   
+        #region Filtros Relacionales
 
-        public List<TM_Clientes> listarClientes(Db_GoldDataContext db_GoldDataContext) 
+        public List<TM_Clientes> listarClientes() 
         {
-            return db_GoldDataContext.TM_Clientes.ToList();
+            return dbGold.TM_Clientes.ToList();
         }
 
-        public List<TM_ServicioAhorros> listarAhorros(Db_GoldDataContext db_GoldDataContext)
+        public List<TM_ServicioAhorros> listarAhorros()
         {
-            return db_GoldDataContext.TM_ServicioAhorros.ToList();
+            return dbGold.TM_ServicioAhorros.ToList();
         }
 
-        public List<TM_ServicioCredito> listarCredito(Db_GoldDataContext db_GoldDataContext)
+        public List<TM_ServicioCredito> listarCredito()
         {
-            return db_GoldDataContext.TM_ServicioCredito.ToList();
+            return dbGold.TM_ServicioCredito.ToList();
         }
 
-        public List<TM_ServicioCorriente> listarCorriente(Db_GoldDataContext db_GoldDataContext)
+        public List<TM_ServicioCorriente> listarCorriente()
         {
-            return db_GoldDataContext.TM_ServicioCorriente.ToList();
+            return dbGold.TM_ServicioCorriente.ToList();
         }
 
-        public List<TM_Prestamos> listarPrestamos(Db_GoldDataContext db_GoldDataContext)
+        public List<TM_Prestamos> listarPrestamos()
         {
-            return db_GoldDataContext.TM_Prestamos.ToList();
+            return dbGold.TM_Prestamos.ToList();
         }
 
-        public List<TD_CuentaCorriente> listarCuentaCorriente(Db_GoldDataContext db_GoldDataContext)
+        public List<TD_CuentaCorriente> listarCuentaCorriente()
         {  
-            return db_GoldDataContext.TD_CuentaCorriente.ToList();
+            return dbGold.TD_CuentaCorriente.ToList();
         }
 
-        public List<TD_CuentaAhorros> listarCuentaAhorros(Db_GoldDataContext db_GoldDataContext)
+        public List<TD_CuentaAhorros> listarCuentaAhorros()
         {
-            return db_GoldDataContext.TD_CuentaAhorros.ToList();
+            return dbGold.TD_CuentaAhorros.ToList();
         }
 
-        public List<TD_CuentaCredito> listarCuentaCredito(Db_GoldDataContext db_GoldDataContext)
+        public List<TD_CuentaCredito> listarCuentaCredito()
         {
-            return db_GoldDataContext.TD_CuentaCredito.ToList();
+            return dbGold.TD_CuentaCredito.ToList();
+        }
+        public List<TD_CuentaPrestamo> listarCuentaPrestamo()
+        {
+            return dbGold.TD_CuentaPrestamo.ToList();
+        }
+
+        public List<TD_Transacciones> listarTransacciones()
+        {
+            return dbGold.TD_Transacciones.ToList();
         }
 
 
- 
+        #endregion
+
+        #region Filtros Relacionales
+
+        public List<TD_CuentaAhorros> listAhorrosCliente(int id, Db_GoldDataContext db_GoldDataContext)
+        {
+            return db_GoldDataContext.TD_CuentaAhorros.Where(x => x.numerocuenta == id).ToList();
+        }
+        #endregion
+
 
     }
- }
+}
