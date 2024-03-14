@@ -13,7 +13,7 @@ namespace CapaNegocios.Acciones
 {
     public class AccionesConsulta : AccionesBases
     {
-        #region Filtros Relacionales
+        #region Listados Genericos
 
         public List<TM_Clientes> listarClientes() 
         {
