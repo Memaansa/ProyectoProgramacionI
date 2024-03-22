@@ -11,13 +11,30 @@
     <div class="panel-body">
         <div class="row">
             @* campos de textos y registros*@
-            <div class="col-lg-1">
+            <div class="col-lg-2">
                 <label> Descripciòn </label>
-            
+
             </div>
             <div class="col-lg-4">
                 <input name="category_txt" id="category_txt" class="form-control" type="text" />
             </div>
+            <div class="col-lg-4">
+                <a id="btnAgregar" class="btn btn-success glyphicon glyphicon-plus" style="background:green">Agregar</a>
+
+            </div>
+            <div class="col-lg-4">
+                <a id="btnCancel" class="btn btn-danger" style="display:none">Cancelar</a>
+
+            </div>
         </div>
     </div>
+
+    <br />
+    <table id="tblCategory" class="table">
+        <theead>
+
+        </theead>
+
+    </table>
+
 </div>
