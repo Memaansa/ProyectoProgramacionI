@@ -33,5 +33,16 @@ namespace CapaDatos.Properties {
                 return ((string)(this["DbGoldenConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DEZZ\\SQLEXPRESS;Initial Catalog=PROG1;Integrated Security=True;TrustS" +
+            "erverCertificate=True")]
+        public string PROG1ConnectionString {
+            get {
+                return ((string)(this["PROG1ConnectionString"]));
+            }
+        }
     }
 }
