@@ -182,9 +182,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Mantenimiento\Index.cshtml" />
     <Content Include="Views\Seguridad\Login.cshtml" />
-    <Content Include="Views\Seguridad\_UsuarioAdmin.cshtml" />
-    <Content Include="Views\Seguridad\_UsuarioFuncional.cshtml" />
-    <Content Include="Views\Seguridad\_UsuarioTecnico.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -230,9 +227,6 @@
       <Project>{8c89ca5d-18ec-4459-a24d-93d5f6faca43}</Project>
       <Name>CapaNegocios</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
