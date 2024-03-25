@@ -27,12 +27,12 @@ namespace CapaNegocios.Acciones
 
         public List<TM_ServicioCredito> listarCredito()
         {
-            return dbGold.TM_ServicioCredito.ToList();
+            return dbGold.TM_ServicioCreditos.ToList();
         }
 
         public List<TM_ServicioCorriente> listarCorriente()
         {
-            return dbGold.TM_ServicioCorriente.ToList();
+            return dbGold.TM_ServicioCorrientes.ToList();
         }
 
         public List<TM_Prestamos> listarPrestamos()
@@ -42,7 +42,7 @@ namespace CapaNegocios.Acciones
 
         public List<TD_CuentaCorriente> listarCuentaCorriente()
         {  
-            return dbGold.TD_CuentaCorriente.ToList();
+            return dbGold.TD_CuentaCorrientes.ToList();
         }
 
         public List<TD_CuentaAhorros> listarCuentaAhorros()
@@ -52,11 +52,11 @@ namespace CapaNegocios.Acciones
 
         public List<TD_CuentaCredito> listarCuentaCredito()
         {
-            return dbGold.TD_CuentaCredito.ToList();
+            return dbGold.TD_CuentaCreditos.ToList();
         }
         public List<TD_CuentaPrestamo> listarCuentaPrestamo()
         {
-            return dbGold.TD_CuentaPrestamo.ToList();
+            return dbGold.TD_CuentaPrestamos.ToList();
         }
 
         public List<TD_Transacciones> listarTransacciones()
