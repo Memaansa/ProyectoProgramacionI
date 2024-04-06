@@ -46,6 +46,7 @@
     <Compile Include="Acciones\AccionesBases.cs" />
     <Compile Include="Acciones\AccionesConsulta.cs" />
     <Compile Include="Acciones\AccionSeguridad.cs" />
+    <Compile Include="Acciones\AcciónMantenimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

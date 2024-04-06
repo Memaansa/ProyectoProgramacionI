@@ -19,7 +19,7 @@ namespace Prueba_Proyecto_Programación.Controllers
             return View();
         }
 
-        public ActionResult btnIniciarSesion(string usuario = "", string clave = "") 
+        public ActionResult btnIniciarSesion(string usuario = "", string clave = "")
         {
             string vista = string.Empty;
             if (accionSeguridad.AuthenticationUser(usuario, clave))
@@ -34,5 +34,17 @@ namespace Prueba_Proyecto_Programación.Controllers
 
         }
 
+        public ActionResult UsuarioFuncional() 
+        { 
+            
+            return View(); 
+        }
+
+        public ActionResult UsuarioTecnico()
+        {
+
+            return View();
+        }
     }
+
 }
