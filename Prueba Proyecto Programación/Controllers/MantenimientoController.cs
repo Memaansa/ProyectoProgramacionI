@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocios.Acciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -9,10 +10,11 @@ namespace Prueba_Proyecto_Programación.Controllers
 {
     public class MantenimientoController : Controller
     {
+        public AcciónMantenimiento Mantenimiento = new AcciónMantenimiento();
         // GET: Mantenimiento
-        public ActionResult Index()
+        public ActionResult Mantenimientoindex()
         {
-            
+           
 
             return View();
         }       
