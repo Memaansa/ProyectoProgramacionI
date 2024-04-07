@@ -26,5 +26,11 @@ namespace Prueba_Proyecto_Programación.Controllers
 
             return View();
         }
+        public ActionResult Mantenimiento()
+        {
+            ViewBag.Message = "Averiguamos ahora.";
+
+            return View();
+        }
     }
 }

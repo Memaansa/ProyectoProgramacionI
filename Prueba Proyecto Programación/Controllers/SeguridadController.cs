@@ -21,9 +21,18 @@ namespace Prueba_Proyecto_Programación.Controllers
 
         public ActionResult btnIniciarSesion(string usuario = "", string clave = "")
         {
-           
+            string vista = string.Empty;
 
-            return View("_UsuarioTecnico");
+            if (accionSeguridad.AuthenticationUser(usuario, clave))
+            {
+                vista = accionSeguridad.GetProfileUser(usuario);
+            }
+            else
+            {
+                vista = "Login";
+            }
+
+            return View("_UsuarioFuncional");
 
         }
 

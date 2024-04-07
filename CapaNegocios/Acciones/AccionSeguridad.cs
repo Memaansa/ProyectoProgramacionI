@@ -17,8 +17,8 @@ namespace CapaNegocios.Acciones
             bool _access = false;
 
             try {
-                var validate = dbGold.TM_Clientes.
-                    FirstOrDefault(x=>x.clave == clave & x.username == username);
+                var validate = dbGold.TM_Usuario.
+                    FirstOrDefault(x=>x.userName == clave & x.PasswordUser == username);
 
                 _access = (validate != null) ? true : false;
                   
