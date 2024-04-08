@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "MantenimientoTablas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MantenimientoTablas</h2>
+<!--Aqui iria el diseño de mantenimientoTablas, puse abajo el script de mi parte y ya-->>
+
+
+@section scripts
+    {
+    <script>
+        $(document).ready(function () {
+
+            $('.btnSave').click(function () {
+                $.post('/Mantenimiento/GuardarOperacion/', { 'descripcion': $('txtDescripcion').val(), 'ruta': $('txtUrls').val() },
+                    function (data) {
+                        alert(data);
+                    })
+            })
+        });
+    </script>
+}

@@ -180,12 +180,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Mantenimiento\Index.cshtml" />
     <Content Include="Views\Seguridad\Login.cshtml" />
     <Content Include="Views\Seguridad\_UsuarioAdmin.cshtml" />
     <Content Include="Views\Seguridad\_UsuarioFuncional.cshtml" />
     <Content Include="Views\Seguridad\_UsuarioTecnico.cshtml" />
     <Content Include="Views\Home\Mantenimiento.cshtml" />
+    <Content Include="Views\Mantenimiento\MantenimientoIndex.cshtml" />
+    <Content Include="Views\Mantenimiento\MantenimientoTablas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

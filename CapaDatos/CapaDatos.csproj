@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base_de_Datos\Db_Gold.cs">
+      <DependentUpon>Db_Gold.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Base_de_Datos\Db_Gold.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
