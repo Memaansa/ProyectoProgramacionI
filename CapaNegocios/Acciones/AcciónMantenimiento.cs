@@ -10,6 +10,23 @@ namespace CapaNegocios.Acciones
 {
     public class AcciónMantenimiento : AccionesBases
     {
+        public List<mEstatus> ListarEstados()
+        {
+            var fuentes = Db_GoldDataContext.TM_Status.ToList();
+
+            foreach (var item fuentes)
+            {
+                mEstatus modelos = new mEstatus();
+
+                modelos._descriptionEstaus = item.DescriptionStatus;
+                modelos._fecCreate = item.DateCreate.Value;
+                modelos._createBy = item.CreateBy;
+
+                Lista.Add(modelos);
+            }
+            return Lista;
+        }
+
         public string GuardarOperacionSistema(string name, string url)
         {
             //mensaje de retorno
