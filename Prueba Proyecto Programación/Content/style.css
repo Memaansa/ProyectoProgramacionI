@@ -31,6 +31,8 @@ body {
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
+    background-attachment: fixed
+
 }
 
 

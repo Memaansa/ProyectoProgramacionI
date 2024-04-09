@@ -1,0 +1,176 @@
+﻿/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Since most of your text is white */
+    background-color: #1F1D36; /* Dark background color */
+}
+
+/* Simple flexbox navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5%;
+    background-color: #1F1D36; /* Matching the background */
+}
+
+    nav a, nav a:visited {
+        color: white;
+        text-decoration: none;
+        padding: 0.5em;
+    }
+
+        nav a.cta {
+            background-color: #E2B007; /* Gold color for the call-to-action button */
+            padding: 0.5em 1em;
+            border-radius: 20px;
+            color: #1F1D36; /* Dark text color for contrast */
+        }
+
+/* Hero section adjustments for side-by-side content and image */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    background: linear-gradient(145deg, #6B63FF, #9B67FF); /* Gradient background */
+    text-align: left; /* Align text to the left */
+}
+
+    #hero h1 {
+        font-size: 3rem; /* Adjusted for larger text */
+        margin-bottom: 0.5em;
+    }
+
+    #hero p {
+        font-size: 1.5rem; /* Slightly larger text */
+        margin-bottom: 1.5em;
+        color: #fff; /* Light purple text */
+    }
+
+.hero-image img {
+    max-width: 50%; /* Limiting image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.btn {
+    background-color: #6B63FF; /* Purple background */
+    padding: 1em 2em;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Services grid */
+#services {
+    text-align: center;
+    padding: 2em;
+}
+
+    #services h2 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+.service-item {
+    background-color: #302E45; /* Dark cards */
+    border-radius: 15px;
+    padding: 2em;
+    margin-bottom: 1em;
+}
+
+/* Subscription section */
+#subscription {
+    background-color: #2C2A47; /* Slightly lighter dark background */
+    padding: 3em 0;
+    text-align: center;
+}
+
+    #subscription h2 {
+        margin-bottom: 1em;
+    }
+
+    #subscription form input[type="email"] {
+        padding: 1em;
+        margin-right: 0.5em;
+        border: none;
+        border-radius: 20px;
+    }
+
+    #subscription form button {
+        padding: 1em 2em;
+        background-color: #E2B007; /* Gold background */
+        color: #1F1D36; /* Dark text color */
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+/* Footer */
+footer {
+    background-color: #2C2A47; /* Slightly lighter dark background */
+    padding: 1em 5%;
+    text-align: center;
+}
+
+    footer p {
+        color: #B6B2C9; /* Light purple text */
+    }
+
+.additional-info {
+    margin-top: 20px; /* Añade un espacio arriba del contenedor */
+    padding: 15px;
+    background-color: #302E45; /* Usa un color de fondo para distinguir esta área, si es necesario */
+    border-radius: 8px; /* Opcional: añade bordes redondeados */
+    color: #ffffff; /* Asegura que el texto sea legible */
+    /* Añade otros estilos según sea necesario */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos existentes... */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5%;
+    background-color: #1F1D36; /* Asegúrate de que este color de fondo coincida con tu diseño */
+}
+
+.logo {
+    height: 50px; /* Ajusta la altura del logo según necesites */
+    width: auto; /* Mantiene la proporción del logo */
+    margin-right: 20px; /* Añade un margen a la derecha si es necesario */
+}
+
+/* Continuación de tus estilos... */
+
+.service-info-image {
+    display: block;
+    max-width: 100%; /* Asegura que la imagen sea responsiva y no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 20px auto; /* Añade algo de margen arriba y abajo, y centra la imagen horizontalmente */
+    border-radius: 8px; /* Opcional: añade bordes redondeados para un estilo más suave */
+}
+
+.additional-info {
+    margin-top: 20px; /* Añade un espacio arriba del contenedor */
+    padding: 15px;
+    background-color: #302E45; /* Usa un color de fondo para distinguir esta área, si es necesario */
+    border-radius: 8px; /* Opcional: añade bordes redondeados */
+    color: #ffffff; /* Asegura que el texto sea legible */
+    /* Añade otros estilos según sea necesario */
+}
