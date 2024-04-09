@@ -15,6 +15,8 @@ namespace CapaNegocios.Acciones
         {
             var fuentes = dbGold.TM_Status.ToList();
 
+            List<mEstatus> lista = new List<mEstatus>();
+
             foreach (var item in fuentes)
             {
                 mEstatus modelos = new mEstatus();
@@ -31,7 +33,7 @@ namespace CapaNegocios.Acciones
 
         public List<TM_OperacionSistema> ListaOperacionSistema()
         {
-            var lista = dbGold.TM_OperacionSistemas
+            var lista = dbGold.TM_OperacionSistema
                 .Where(x=>x.flagActivo == true)
                 .ToList();
 
@@ -39,7 +41,7 @@ namespace CapaNegocios.Acciones
         }
 
 
-        public string GuardarOperacionSistema(string name, string url)
+        public string GuardarOperacionSistema(string descripcion, string ruta)
         {
             //mensaje de retorno
 
@@ -50,8 +52,8 @@ namespace CapaNegocios.Acciones
                 //bloque de codigo para llamar las operaciones del sistema
                 TM_OperacionSistema register = new TM_OperacionSistema()
                 {
-                    DescripcionOperacion = name,
-                    enlace_OperacionSistema = url,
+                    DescripcionOperacion = descripcion,
+                    enlace_OperacionSistema = ruta,
                     fecCreacion = DateTime.Now,
                     usuarioCreacion = Environment.UserName,
                     flagActivo = true
@@ -59,7 +61,7 @@ namespace CapaNegocios.Acciones
 
                 msg = "La informacion fue registrada correctamente";
 
-                dbGold.TM_OperacionSistemas.InsertOnSubmit(register);
+                dbGold.TM_OperacionSistema.InsertOnSubmit(register);
                 dbGold.SubmitChanges(); //commit
                 
             }
