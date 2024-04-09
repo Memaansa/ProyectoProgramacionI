@@ -10,12 +10,12 @@
     @foreach (var items in Model._TblOperaciones)
     {
 
-        <div class="card" style="width: 18rem;">
-            <a href="#">
-                <div class=" card-header" style="font-family:'Times New Roman'">Título</div>
+        <div class="card" style="width: 18rem; margin-right:2%;">
+            <a href="@items.enlace_OperacionSistema">
+                <div class=" card-header" style="font-family:'Times New Roman'">@items.DescripcionOperacion</div>
 
                 <div class="card-body">
-                    <h5 class="card-title">Descripción</h5>
+                    <h5 class="card-title">@items.comentarios</h5>
                 </div>
             </a>
 

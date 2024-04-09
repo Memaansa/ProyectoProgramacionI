@@ -31,7 +31,9 @@ namespace CapaNegocios.Acciones
 
         public List<TM_OperacionSistema> ListaOperacionSistema()
         {
-            var lista = dbGold.TM_OperacionSistemas.ToList();
+            var lista = dbGold.TM_OperacionSistemas
+                .Where(x=>x.flagActivo == true)
+                .ToList();
 
             return lista == null ? new List<TM_OperacionSistema>() : lista;
         }

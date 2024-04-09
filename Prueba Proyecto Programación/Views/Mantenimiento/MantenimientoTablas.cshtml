@@ -1,12 +1,78 @@
-﻿
+﻿@model CapaModelo.V_Modelos.VM_Operaciones
 @{
     ViewBag.Title = "MantenimientoTablas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>MantenimientoTablas</h2>
-<!--Aqui iria el diseño de mantenimientoTablas, puse abajo el script de mi parte y ya-->>
 
+
+<div class="panel panel-default" id="panelTablas">
+    <div class="panel panel-heading" style="text-align: center;"><strong>Mantenimientos de Tablas</strong> </div>
+    <div class="panel panel-body">
+        <div class="col-lg-12">
+            <div class="col-lg-4">
+                <label>Descripción:</label>
+                <input type="text" name="txtDescripcion" class="form-control " placeholder="Introduzca descripción" id="txtDescripcion" />
+            </div>
+            <div class="col-lg-4">
+                <label>URLs:</label>
+                <input type="text" name="txtUrls" class="form-control " placeholder="Introduzca la URL/controller/action" id="txtUrls" />
+            </div>
+            <div class="col-lg-4" style="padding:initial;  ">
+                <br />
+                <a class="btn btn-primary btnSave" style="width: 25% "> Guardar</a>
+                <a class="btn btn-primary btnEdit" style="width: 25%; display:none;"> Editar</a>
+
+            </div>
+            <br />
+        </div>
+        <br />
+        <table class="table table-responsive" id="tblMantenimientos">
+            <thead>
+                <tr>
+                    <th>Cod.</th>
+                    <th>Descripción</th>
+                    <th>URLS</th>
+                    <th>Creación</th>
+                    <th>Modificación</th>
+                    <th>Anulación</th>
+                    <th>Estatus</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+
+                @foreach (var item in Model._TblOperaciones)
+                {
+                    <tr class=" table table-active " id="TblMantenimiento">
+                        <td>@item.OperacionlD</td>
+                        <td>@item.DescripcionOperacion</td>
+                        <td>@item.enlace_OperacionSistema</td>
+                        <td>@item.usuarioCreacion / @item.fecCreacion</td>
+                        <td>@item.usuarioModificacion / @item.fecModficacion</td>
+                        <td>@item.usuarioCancelacion / @item.fecCancelacion</td>
+                        @if (item.flagActivo == true)
+                        {
+                            <td style="color:forestgreen">Activo</td>
+                        }
+                        else
+                        {
+                            <td style = "color:darkred" >Inactivo</td >
+                        }
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+</div>
 
 @section scripts
     {

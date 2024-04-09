@@ -12,14 +12,12 @@ namespace Prueba_Proyecto_Programación.Controllers
     public class MantenimientoController : Controller
     {
         public AcciónMantenimiento Mantenimiento = new AcciónMantenimiento();
-
+        public VM_Operaciones Oper = new VM_Operaciones();
 
 
         // GET: Mantenimiento
         public ActionResult MantenimientoIndex()
-        {
-            VM_Operaciones Oper = new VM_Operaciones(); 
-
+        {           
             Oper._TblOperaciones = Mantenimiento.ListaOperacionSistema();
 
             return View(Oper);
@@ -27,7 +25,9 @@ namespace Prueba_Proyecto_Programación.Controllers
 
         public ActionResult MantenimientoTablas()
         {
-            return View();
+            Oper._TblOperaciones = Mantenimiento.ListaOperacionSistema();
+
+            return View(Oper);
         }
 
         public string GuardarOperacion(string descripcion, string ruta)
