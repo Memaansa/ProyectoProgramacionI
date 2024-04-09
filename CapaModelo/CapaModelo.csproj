@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelos\mEstatus.cs" />
     <Compile Include="Modelos\ModelCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="V Modelos\VM_Operaciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">

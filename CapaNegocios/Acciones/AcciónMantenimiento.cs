@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,20 +13,29 @@ namespace CapaNegocios.Acciones
     {
         public List<mEstatus> ListarEstados()
         {
-            var fuentes = Db_GoldDataContext.TM_Status.ToList();
+            var fuentes = dbGold.TM_Status.ToList();
 
-            foreach (var item fuentes)
+            foreach (var item in fuentes)
             {
                 mEstatus modelos = new mEstatus();
 
-                modelos._descriptionEstaus = item.DescriptionStatus;
+                modelos._descripctionEstatus = item.DescriptionStatus;
                 modelos._fecCreate = item.DateCreate.Value;
                 modelos._createBy = item.CreateBy;
 
-                Lista.Add(modelos);
+                lista.Add(modelos);
             }
-            return Lista;
+            return lista;
         }
+
+
+        public List<TM_OperacionSistema> ListaOperacionSistema()
+        {
+            var lista = dbGold.TM_OperacionSistemas.ToList();
+
+            return lista == null ? new List<TM_OperacionSistema>() : lista;
+        }
+
 
         public string GuardarOperacionSistema(string name, string url)
         {

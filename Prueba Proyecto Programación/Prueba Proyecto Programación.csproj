@@ -184,7 +184,6 @@
     <Content Include="Views\Seguridad\_UsuarioAdmin.cshtml" />
     <Content Include="Views\Seguridad\_UsuarioFuncional.cshtml" />
     <Content Include="Views\Seguridad\_UsuarioTecnico.cshtml" />
-    <Content Include="Views\Home\Mantenimiento.cshtml" />
     <Content Include="Views\Mantenimiento\MantenimientoIndex.cshtml" />
     <Content Include="Views\Mantenimiento\MantenimientoTablas.cshtml" />
   </ItemGroup>

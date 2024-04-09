@@ -1,4 +1,5 @@
-﻿using CapaNegocios.Acciones;
+﻿using CapaModelo.V_Modelos;
+using CapaNegocios.Acciones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,16 @@ namespace Prueba_Proyecto_Programación.Controllers
 
 
         // GET: Mantenimiento
-        public ActionResult Mantenimientoindex()
+        public ActionResult MantenimientoIndex()
+        {
+            VM_Operaciones Oper = new VM_Operaciones(); 
+
+            Oper._TblOperaciones = Mantenimiento.ListaOperacionSistema();
+
+            return View(Oper);
+        }
+
+        public ActionResult MantenimientoTablas()
         {
             return View();
         }
