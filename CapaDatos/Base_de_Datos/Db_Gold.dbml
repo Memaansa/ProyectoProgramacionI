@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PROG1" Class="Db_GoldDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DEZZ\SQLEXPRESS;Initial Catalog=PROG1;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="PROG1ConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DbGolden" Class="Db_GoldDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-MELI-😊;Initial Catalog=DbGolden;Integrated Security=True;Encrypt=False" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="DbGoldenConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TM_ServicioCredito" Member="TM_ServicioCreditos">
     <Type Name="TM_ServicioCredito">
       <Column Name="servicio_credito_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -225,9 +225,9 @@
       <Column Name="CreateBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TM_OperacionSistema" Member="TM_OperacionSistemas">
+  <Table Name="dbo.TM_OperacionSistema" Member="TM_OperacionSistema">
     <Type Name="TM_OperacionSistema">
-      <Column Name="OperacionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OperacionlD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="enlace_OperacionSistema" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="DescripcionOperacion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="fecCreacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
@@ -237,6 +237,7 @@
       <Column Name="usuarioModificacion" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
       <Column Name="usuarioCancelacion" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
       <Column Name="flagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="comentarios" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
