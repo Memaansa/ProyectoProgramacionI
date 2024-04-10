@@ -2,32 +2,85 @@
     ViewBag.Title = "Home Page";
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="~/Content/design.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldBank - Home Page</title>
+    <style>
+    </style>
+</head>
+<body>
+    <!-- <header>
+          Navigation bar 
+    <nav>
+        <!-- Logo 
+        <a href="#">
+            <img src="~/img/logo2.png" alt="GOLD Bank Logo" class="logo">
+        </a>
+        <a href="#">Inicio</a>
+        <a href="#">Quienes somos?</a>
+        <a href="#">Monedero</a>
+        <a href="#">Iniciar sesion</a>
+        <a href="#" class="cta">Crear cuenta</a>
+    </nav>
+    </header> -->
+
+    <!-- Hero section -->
+    <section id="hero">
+        <h1>La mejor forma para comenzar tu vida financiera</h1>
+        <p>Donde la innovacion se encuentra con lo bancario del futuro. ...</p>
+        <a href="#" class="btn">Mas informacion</a>
+        <!-- Image of the phone would be added here as a background image using CSS -->
     </section>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
+    <!-- Services section -->
+    <section id="services">
+        <h2>Que Ofrecemos?</h2>
+        <div class="service-item">
+            <!-- Icon image -->
+            <h3>Plataforma Bancaria</h3>
+            <p>Ofrecemos una plataforma bancaria facil de usar en dispositivos moviles...</p>
+        </div>
+        <!-- Additional information area -->
+        <div class="additional-info">
             <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
-    </div>
-</main>
+                Se ofrece una gama de servicios financieros orientados a jovenes, incluyendo opciones de credito con tasas competitivas y periodos de gracia para fomentar la construccion de un historial crediticio solido, servicios educativos sobre finanzas personales como ahorro, inversion y credito responsable, junto con herramientas de seguimiento de gastos y talleres. Ademas, se proporciona una plataforma bancaria intuitiva y facil de usar, tanto en dispositivos moviles como en la web, que incluye funciones de pagos moviles y alertas de gastos, facilitando asi una gestion financiera conveniente y atractiva para los jovenes.
+                <!-- Repeat for each service -->
+        </div>
+    </section>
+
+    <!-- Subscription section -->
+    <section id="subscription">
+        <h2>Suscribete a nuestro boletin para tener informaciones</h2>
+        <!-- Subscription form -->
+        <form>
+            <input type="email" placeholder="E-mail">
+            <button type="submit">Suscribete</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h3>GOLD Bank</h3>
+            <!-- Footer navigation -->
+            <a href="#">Nosotros</a>
+            <a href="#">Contacto</a>
+            <a href="#">Más</a>
+            <!-- Social Media Links -->
+        </div>
+        <div>
+            <p>App Proximamente en</p>
+            <!-- Links to app stores -->
+        </div>
+        <p>Todos los derechos reservados Grupo3</p>
+    </footer>
+
+    <script>
+            // Add any JavaScript here
+    </script>
+</body>
+</html>

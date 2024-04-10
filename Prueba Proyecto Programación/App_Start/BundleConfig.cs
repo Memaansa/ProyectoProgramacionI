@@ -25,6 +25,13 @@ namespace Prueba_Proyecto_Programación
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle ("~/Content/css2").Include(
+                "~/style.css",
+                "~/style navbar.css"
+                ));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
