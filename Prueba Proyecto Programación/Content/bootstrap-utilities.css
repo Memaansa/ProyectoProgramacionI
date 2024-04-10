@@ -126,6 +126,13 @@
   color: #0a58ca !important;
 }
 
+.logo2 {
+    display: flex;
+    justify-content: flex-start;
+    background-image: src(../img/logo.png)
+}
+
+
 .link-secondary {
   color: #6c757d !important;
 }

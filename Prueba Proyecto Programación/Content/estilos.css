@@ -1,0 +1,312 @@
+﻿@import url();
+
+
+/* Reset CSS */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1F1D36;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #4f38b6;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar a img {
+        max-width: 100px;
+        width: 100px;
+        height: 60px;
+    }
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    background-image: src(../img/logo.png)
+}
+
+
+
+
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+
+    .navbar ul li {
+        display: inline;
+        margin-left: 20px;
+    }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+            .navbar ul li a:hover {
+                color: #16abf0; /* Cambiar color al pasar el mouse */
+                width: auto;
+                background-color: rgba(0, 0, 0, 0.192);
+            }
+
+/* Contenido principal */
+.content-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: solid 2px #00000028;
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+    .contenido img {
+        display: flex;
+        width: 300px;
+        height: auto;
+        mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        transform: rotate(-3deg);
+        transition: transform 0.3s ease;
+    }
+
+        .contenido img:hover {
+            transform: rotate(-9deg) scale(1.5); /* Girar más al pasar el mouse */
+        }
+
+.texto {
+    max-width: 600px;
+    text-align: left;
+}
+
+    .texto h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .texto p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+.more-info {
+    background-color: #4f38b6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    width: 120px;
+}
+
+    .more-info a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .more-info:hover {
+        background-color: #351e78; /* Cambiar color al pasar el mouse */
+    }
+
+/* Sección de párrafos */
+.parrafos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 100px;
+}
+
+    .parrafos section {
+        background-color: #4f38b6a6; /* Color principal */
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+        height: 150px;
+        position: relative;
+        bottom: 20px;
+    }
+
+        .parrafos section::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 50%; /* Ajustar la altura al 50% para que solo ocupe la mitad */
+            background-color: #0eddecb4; /* Color secundario */
+            opacity: 0.2; /* Ajusta la opacidad según sea necesario */
+            border-radius: 0 0 10px 10px; /* Aplicar el mismo radio de borde que la sección */
+            z-index: -1; /* Mover el pseudo-elemento detrás del contenido de la sección */
+        }
+
+
+        .parrafos section p {
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+        }
+
+
+
+
+
+footer {
+    background-color: #242241;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .footer-content h1 {
+        color: #d4b814;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-content p {
+        margin: 0;
+    }
+
+    .footer-content nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .footer-content nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+            .footer-content nav ul li:last-child {
+                margin-right: 0;
+            }
+
+            .footer-content nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+.column {
+    flex: 1 1 20%;
+    max-width: 20%;
+    margin-right: 20px;
+}
+
+    .column:last-child {
+        margin-right: 0;
+    }
+
+    .column h1 {
+        font-size: 18px;
+    }
+
+    .column ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .column ul li {
+            margin-bottom: 5px;
+        }
+
+            .column ul li a {
+                text-decoration: none;
+                color: gray;
+            }
+
+.icons img {
+    max-width: 200px;
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.suscripcion {
+    background-color: #2c2957; /* Color de fondo de la sección de suscripción */
+    color: #fff; /* Color del texto de la sección de suscripción */
+    padding: 40px 20px; /* Espaciado interno de la sección de suscripción */
+    height: 200px;
+}
+
+.suscripcion-content {
+    max-width: 800px; /* Ancho máximo del contenido de la sección de suscripción */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    text-align: center; /* Alinear el contenido al centro */
+}
+
+    .suscripcion-content h2 {
+        margin-bottom: 20px; /* Espacio inferior del título */
+    }
+
+    .suscripcion-content form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .suscripcion-content label {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .suscripcion-content input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .suscripcion-content button {
+        width: 100px;
+        height: 38px;
+        font-size: 16px;
+        background-color: #ffd700; /* Color de fondo del botón */
+        color: #333; /* Color del texto del botón */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .suscripcion-content button:hover {
+            background-color: #ffcc00; /* Color de fondo del botón al pasar el mouse */
+        }

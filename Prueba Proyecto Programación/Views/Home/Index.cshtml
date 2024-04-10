@@ -5,82 +5,139 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="~/Content/design.css" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoldBank - Home Page</title>
-    <style>
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="~/Content/estilos.css" />
 </head>
 <body>
-    <!-- <header>
-          Navigation bar 
-    <nav>
-        <!-- Logo 
-        <a href="#">
-            <img src="~/img/logo2.png" alt="GOLD Bank Logo" class="logo">
-        </a>
-        <a href="#">Inicio</a>
-        <a href="#">Quienes somos?</a>
-        <a href="#">Monedero</a>
-        <a href="#">Iniciar sesion</a>
-        <a href="#" class="cta">Crear cuenta</a>
-    </nav>
-    </header> -->
+    <!--- <nav class="navbar">
+         <div class="logo">
+             <a href="enlace.html"><img src="logo.png" alt="logo" srcset="" /></a>
+         </div>
+         <ul>
+             <li><a href="#inicio">Inicio</a></li>
+             <li><a href="#quienes-somos">Quienes Somos</a></li>
+             <li><a href="#monedero">Monedero</a></li>
+             <li><a href="#iniciar-sesion">Iniciar Sesión</a></li>
+             <li><a class="crear-cuenta" href="#crear-cuenta">Crear Cuenta</a></li>
+         </ul>
+     </nav> -->
+    <main class="content-all">
+        <div class="contenido">
+            <img src="~/img/ipn.png" alt="Imagen" />
+            <div class="texto">
+                <h1>La mejor forma para comenzar tu vida financiera</h1>
+                <p>
+                    Donde la innovación se encuentra con la banca del futuro. Con
+                    nuestra plataforma fácil de usar y segura, podrás realizar tus
+                    transacciones financieras en cualquier momento y desde cualquier
+                    lugar. Desde transferencias instantáneas hasta gestión de
+                    inversiones, estamos aquí para hacer que tu experiencia bancaria sea
+                    más conveniente y eficiente que nunca. Únete a nosotros hoy y
+                    descubre el poder de la banca digital en tu vida.
+                </p>
 
-    <!-- Hero section -->
-    <section id="hero">
-        <h1>La mejor forma para comenzar tu vida financiera</h1>
-        <p>Donde la innovacion se encuentra con lo bancario del futuro. ...</p>
-        <a href="#" class="btn">Mas informacion</a>
-        <!-- Image of the phone would be added here as a background image using CSS -->
-    </section>
-
-    <!-- Services section -->
-    <section id="services">
-        <h2>Que Ofrecemos?</h2>
-        <div class="service-item">
-            <!-- Icon image -->
-            <h3>Plataforma Bancaria</h3>
-            <p>Ofrecemos una plataforma bancaria facil de usar en dispositivos moviles...</p>
+                <div class="more-info"><a href="">Mas informacion</a></div>
+            </div>
         </div>
-        <!-- Additional information area -->
-        <div class="additional-info">
+    </main>
+    <h1 style="
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        color: white;
+        margin-top: 10px;
+      ">
+        ¿Que ofrecemos?
+    </h1>
+    <div class="parrafos">
+        <section class="1">
             <p>
-                Se ofrece una gama de servicios financieros orientados a jovenes, incluyendo opciones de credito con tasas competitivas y periodos de gracia para fomentar la construccion de un historial crediticio solido, servicios educativos sobre finanzas personales como ahorro, inversion y credito responsable, junto con herramientas de seguimiento de gastos y talleres. Ademas, se proporciona una plataforma bancaria intuitiva y facil de usar, tanto en dispositivos moviles como en la web, que incluye funciones de pagos moviles y alertas de gastos, facilitando asi una gestion financiera conveniente y atractiva para los jovenes.
-                <!-- Repeat for each service -->
+                Ofrecemos una plataforma bancaria fácil de usar en dispositivos
+                móviles y web, con funciones como pagos móviles y alertas de gastos,
+                para una gestión financiera conveniente y atractiva para jóvenes.
+            </p>
+        </section>
+        <section class="2">
+            <p>
+                Diseñar programas de recompensas adaptados a las necesidades de los
+                jóvenes, como descuentos en comercios populares y devolución de dinero
+                en compras recurrentes, para incentivar su participación y fidelidad.
+            </p>
+        </section>
+        <section class="3">
+            <p>
+                Proporcionar servicios educativos sobre ahorro, inversión y crédito
+                responsable, incluyendo herramientas de seguimiento de gastos y
+                talleres presenciales, para ayudar a los jóvenes a tomar decisiones
+                financieras informadas desde una edad temprana.
+            </p>
+        </section>
+
+        <section class="4">
+            <p>
+                Ofrecemos opciones de crédito con tasas competitivas y flexibles, así
+                como periodos de gracia, para ayudar a los jóvenes a construir un
+                historial crediticio sólido desde el principio, preparándolos para
+                futuras solicitudes de préstamos importantes.
+            </p>
+        </section>
+    </div>
+    <section class="suscripcion">
+        <div class="suscripcion-content">
+            <h2>Suscríbete a nuestro boletín para recibir información:</h2>
+            <form action="#" method="POST">
+                <label for="email">Correo electrónico:</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Email"
+                       required />
+                <button type="submit">Suscribirse</button>
+            </form>
         </div>
     </section>
 
-    <!-- Subscription section -->
-    <section id="subscription">
-        <h2>Suscribete a nuestro boletin para tener informaciones</h2>
-        <!-- Subscription form -->
-        <form>
-            <input type="email" placeholder="E-mail">
-            <button type="submit">Suscribete</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <div>
-            <h3>GOLD Bank</h3>
-            <!-- Footer navigation -->
-            <a href="#">Nosotros</a>
-            <a href="#">Contacto</a>
-            <a href="#">Más</a>
-            <!-- Social Media Links -->
-        </div>
-        <div>
-            <p>App Proximamente en</p>
-            <!-- Links to app stores -->
-        </div>
-        <p>Todos los derechos reservados Grupo3</p>
-    </footer>
+        <div class="footer-content">
+            <div class="column">
+                <h1>GOLD BANK</h1>
+                <p>&copy; 2024 Gold bank</p>
+                <p>Todos los derechos reservados grupo:</p>
+            </div>
 
-    <script>
-            // Add any JavaScript here
-    </script>
+            <div class="column">
+                <h1>Nosotros</h1>
+                <ul>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Carreras</a></li>
+                    <li><a href="#">Móvil</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h1>Contacto</h1>
+                <ul>
+                    <li><a href="#">Ayuda/Preguntas frecuentes</a></li>
+                    <li><a href="#">Prensa</a></li>
+                    <li><a href="#">Afiliados</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h1>Más</h1>
+                <ul>
+                    <li><a href="#">Airlineless</a></li>
+                    <li><a href="#">Aerolínea</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h1>&nbsp;</h1>
+                <h2>¡Próximamente en!</h2>
+                <div class="icons">
+                    <img src="google.png" alt="Google Play" />
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
